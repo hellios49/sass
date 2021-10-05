@@ -1,0 +1,30 @@
+@use '../custom' as * ;
+@use '../Components/mixins' as *;
+
+.get-started{
+    background-color: $gray-100;
+    padding: 0rem;
+    margin-bottom: 5rem;
+}
+.gradient{
+    @include gradient;
+    padding:0;
+    
+    h1{
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    p{
+        margin: 0.5rem;
+    }
+    h3{
+        margin: 0.7rem;
+    }
+    ul{
+        list-style: none;
+        li::before{
+            content:'✓';
+        }
+    }
+    
+}

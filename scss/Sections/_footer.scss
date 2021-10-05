@@ -1,0 +1,132 @@
+@use '../custom' as * ;
+@use '../Components/mixins' as *;
+
+
+.footer{
+    padding-top: 1.5rem;
+    background-color: $footer;
+}
+
+// STYLE THE CONTACT BOX 
+.contact-box
+{
+    position: relative;
+    &__icon{
+        width: 3rem;
+        stroke: $primary;
+        @include media-breakpoint-up(sm)
+        {
+            width: 4rem;
+            stroke: $primary;
+        }
+    }
+     &__info{
+         padding: 0.4rem;
+         font-weight: 600;
+
+
+         &--title{
+            color: $white;
+            text-decoration: none;
+            font-size: 1rem;
+            @include media-breakpoint-up(sm)
+            {
+                font-size: 1.5rem;
+            }
+         }
+         &--subtitle{
+            color: $gray-600;
+            text-decoration: none;
+            font-size: 0.8rem;
+            @include media-breakpoint-up(sm)
+            {
+                font-size: 1rem;
+            }
+         }
+     }
+
+}
+
+.footer-sm
+{
+    
+    padding: 0.1rem 5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    @include media-breakpoint-down(md)
+    {
+        font-size: 00.9375rem;
+        font-weight: 300;
+    }
+    a{
+        text-align: end;
+        i{
+            color: $white;
+            font-size: 2rem;
+            @include media-breakpoint-down(md)
+            {
+                font-size: 1rem;
+            }
+            
+        }
+    }
+}
+
+.company
+{
+    .company-title{
+        @include family;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+}
+
+.products
+{
+    list-style-type: none;
+    padding: 0%;
+    li{
+        text-decoration: unset;
+        color: $gray-600;
+        font-size: 1rem;
+        font-weight: 900;
+        &:hover{
+            color: $primary;
+        }
+        margin: 0;
+        padding: 0%;
+    }
+}
+.links{
+    list-style-type: none;
+    padding: 0%;
+    li{
+        
+        a{
+            text-decoration: unset;
+            color: $gray-600;
+            font-size: 1rem;
+            font-weight: 900;
+            padding: 0%;
+            margin: 0%;
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+
+.display-6{
+    font-size: 0.5rem;
+    font-weight: 100;
+    @include family;
+
+    @include media-breakpoint-up(ms)
+    {
+        font-size: 1.2rem;
+        font-weight: 300;
+        @include family;
+
+    }
+}

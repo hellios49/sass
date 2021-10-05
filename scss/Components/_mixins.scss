@@ -1,0 +1,37 @@
+@use '../custom' as * ;
+
+// GRADIENT MIXIN
+@mixin gradient {
+    background:  linear-gradient(to right, rgb($primary,0.95),rgb($secondary,0.95));
+}
+
+// ABSOLUTE POSITION
+@mixin absoluteCenter
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin slowMotion {
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+@mixin  TextlinearColor {
+    background:linear-gradient(to right,$primary 9%,$secondary 50%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+@mixin family
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin transitionProperty {
+    transition-duration: 1000ms;
+    transition-property: all;
+}

@@ -1,0 +1,78 @@
+@use '../custom' as * ;
+@use 'mixins' as * ;
+
+.display-2
+{
+    margin: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    &--intro
+    {
+        display: inline-block;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+    }
+    &--description
+    {
+        font-size: 0.5rem;
+        font-family: 'Poppins', sans-serif;
+        display: block;
+        text-transform: none;
+
+        @include media-breakpoint-up(lg)
+        {
+            font-size: 1.5rem;display: inline-block;
+        }
+    }
+}
+
+.heading-line::before
+{
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto;
+}
+
+.heading-line::after
+{
+    content: "";
+    width: 2rem;
+    padding-top: 0.5rem;
+    height: 0.2rem;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+// DISPLAY-3
+
+.display-3
+{
+    font-size: 3rem;
+    font-style: 600;
+    @include family;
+    &--title{
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        @include TextlinearColor ;
+        @include media-breakpoint-down(sm)
+        {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.border-right
+{
+    border-right: 0.2rem solid $gray-400 ;
+
+    // height: 100%;
+}
+
+// TO DELETE 

@@ -1,0 +1,29 @@
+@use '../Components/mixins' as * ;
+
+.companies
+{
+    padding: 0 0 5rem 0;
+    &__logo-box
+    {
+        max-width: 90%;
+        height: 2.5rem;
+        margin-bottom: 2rem;
+        padding: 0.5em;
+        text-align-last: center;
+        position: relative;
+        filter: grayscale(120);
+        img
+        {
+            height: 100%;
+            
+            
+        }
+        &:hover
+        {
+            max-width: 100%;
+            height: 3rem;
+            filter: initial;
+            @include slowMotion;
+        }
+    }
+}

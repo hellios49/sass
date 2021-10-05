@@ -1,0 +1,64 @@
+@use '../custom' as * ;
+@use '../Components/mixins' as * ;
+
+.portfolio
+{
+    padding: 4rem 0;
+    
+    button{
+        text-transform: capitalize;
+    }
+
+    .portfolio-box
+    {
+
+        position: relative;
+        width: 100%;
+        height: 18.5rem;
+        overflow: hidden;
+        margin-bottom: 1.2rem;
+        border-top: 0.5rem solid rgb($primary,1);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .portfolio-info{
+            background-color: rgb($primary,0.4);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0.4;
+            top: 0%;
+
+            
+            .caption{
+                text-align: center;
+               @include absoluteCenter;
+               color: $white;
+            }
+            h4{
+                @include family;
+                font-size: 1.5rem;
+                font-weight: 100;   
+                text-transform: uppercase;
+                opacity: 1;
+               
+            }
+            
+        }
+        &:hover{
+            img{
+                transform: scale(1.5);
+                @include transitionProperty;
+            }
+            .portfolio-info{
+                opacity: 1;
+                visibility: visible;
+               @include transitionProperty;
+            }
+            
+        }
+    }
+}
